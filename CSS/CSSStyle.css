@@ -1,0 +1,185 @@
+/* To ensure proper sizing*/
+
+*{
+    box-sizing: border-box;
+}
+.div.rotate_right {
+  float: left;
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Safari */
+  transform: rotate(7deg);
+}
+
+.header{
+    padding:    30px; 
+    text-align: right;
+    background: #d0e1e1;
+    color:  #008080;
+}
+
+.footer{
+    padding:    10px; 
+    text-align: right;
+    background: #d0e1e1;
+    color:  #008080;
+}
+
+/*Increase the font size of the <h1> element*/
+
+.header h1{
+    font-size:  50px;
+    text-align: center !important;
+}
+
+.header  form{
+    float:  left;
+}
+
+/* Style the navigation bar*/
+
+.navigationbar{
+    overflow:   hidden; 
+    background-color:   #008080;
+    font-size: 20px;
+}
+
+
+/*Style the navigationbar links*/
+
+.navigationbar a{
+    float:  left;   /*Make sure that the links stay side by side*/
+    display:    block;  /*Change the display to block for respopnsive reason*/
+    color:  white;
+    text-align: center;
+    padding:    15px 20px;
+    text-decoration:    none; /*To remove underline on links*/
+}
+
+/*Right aligned link*/
+
+.navigationbar a.right{
+    float:  right; /*Float a link to the right*/
+}
+
+.navigationbar a:hover{
+    background-color: #669999;
+    color:  black;
+}
+
+
+/*Column Container*/
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/*Creating two columns  Side and Main*/
+
+.leftcolumn{
+        flex:   10%;
+        padding:    10px;
+}
+
+.maincolumn{
+     flex:   80%;
+     padding:   20px;
+     border-color: #008080;
+     border-width:5px;
+}
+
+.maincolumn h2{
+    border: 4px #008080 double;
+    text-align: center;
+    border-radius:  8px;
+}
+
+.maincolumn p{
+    text-align: justify;
+    border: 4px #008080 double;
+    padding: 5px;
+    border-radius:  8px;
+}
+
+.rightcolumn{
+     flex:   10%;
+     padding:    10px;
+}
+	
+@media screen and (max-width: 1000px) {
+	.navigationbar a {
+					float: none;
+					width: 100%;
+	}
+}
+
+
+
+.slider-holder
+        {
+            width: 772px;
+            height: 515px;
+            background-color: #d0e1e1;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            text-align: center;
+            overflow: hidden;
+            border-radius:  8px;
+        }
+	
+        
+ .image-holder
+        {
+            width: 2880px;
+            background-color: Gray;
+            height: 400px;
+            clear: left;
+            position: relative;
+            
+            -webkit-transition: left 2s;    /*Safari and Chrome*/
+            -moz-transition: left 2s;        /*Mozilla*/
+            -o-transition: left 2s;            /*Opera*/ 
+            transition: left 2s;
+        }
+        
+.slider-image
+        {
+            float: left;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+        }
+        
+#slider-image-1:target ~ .image-holder
+        {
+            left: 0px;
+        }
+        
+#slider-image-2:target ~ .image-holder
+        {
+            left: -772px;
+        }
+        
+#slider-image-3:target ~ .image-holder
+        {
+            left: -1544px;
+        }
+        
+.button-holder
+        {
+            position: relative;
+            top: -20px;
+        }
+        
+.slider-change
+        {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            border-radius: 6px;
+            background-color: brown;
+        }
+
+
